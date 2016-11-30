@@ -1,0 +1,878 @@
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 500;
+  src: url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 400;
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+.odivo {
+  font-family: 'OpenSans', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 54.17px;
+  color: #818285;
+  position: relative;
+  z-index: 56;
+  margin-bottom: 80px;
+}
+.odivo_modal {
+  margin-bottom: 0;
+}
+.odivo a {
+  text-transform: none;
+}
+.odivo__container {
+  min-width: 320px;
+  width: 3470px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+}
+.odivo__container:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+@media (max-width: 3500px) {
+  .odivo__container {
+    min-width: 90%;
+    width: 90%;
+    font-size: .7em;
+  }
+}
+@media (max-width: 2500px) {
+  .odivo__container {
+    min-width: 90%;
+    width: 90%;
+    font-size: .3em;
+  }
+}
+@media (max-width: 768px) {
+  .odivo__container {
+    min-width: 98%;
+    width: 98%;
+    font-size: .3em;
+  }
+}
+@media (max-width: 640px) {
+  .odivo__container_details {
+    font-size: .2em;
+  }
+}
+.odivo__form {
+  width: 100%;
+  font-weight: 400;
+  margin-top: 100px;
+}
+@media (max-width: 2500px) {
+  .odivo__form {
+    margin-top: 20px;
+  }
+}
+.odivo__form-head {
+  margin-bottom: 120px;
+  position: relative;
+}
+.odivo__form-head:after {
+  content: '';
+  border-bottom: 1px solid;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 2500px) {
+  .odivo__form-head {
+    margin-bottom: 40px;
+  }
+}
+.odivo__form-header {
+  padding: 0 0 70px;
+  border-bottom: 3px solid;
+}
+.odivo__form-header:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+@media (max-width: 2500px) {
+  .odivo__form-header {
+    padding: 0 0 20px;
+    border-bottom: 1px solid;
+  }
+}
+.odivo__form-header_registration {
+  margin-bottom: 40px;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .odivo__form-header_registration {
+    width: 100%;
+    padding: 50px 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  .odivo__form-header_registration:after {
+    content: '';
+    position: absolute;
+    right: 10%;
+    top: calc(50% - 3px);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #818285 transparent transparent transparent;
+  }
+  .odivo__form-header_registration-alt:after {
+    content: '';
+    position: absolute;
+    right: 10%;
+    top: calc(50% - 3px);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #818285;
+  }
+}
+.odivo__form_registration {
+  margin-top: 0;
+}
+.odivo__form-title {
+  font-size: 1em;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 0 0;
+  color: #818285;
+  font-family: 'OpenSans', Helvetica, Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  float: left;
+  line-height: 1.5em;
+}
+.odivo__form-title_registration {
+  float: none;
+}
+@media (max-width: 768px) {
+  .odivo__form-title {
+    float: none;
+    width: 100%;
+    display: block;
+  }
+}
+.odivo__form-title:after {
+  content: none;
+}
+.odivo__form-content {
+  width: 70%;
+  margin: 125px auto 0;
+}
+.odivo__form-content:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.odivo__form-content_border {
+  border-bottom: 1px solid;
+}
+@media (max-width: 2500px) {
+  .odivo__form-content {
+    margin: 40px auto 0;
+  }
+}
+@media (max-width: 768px) {
+  .odivo__form-content {
+    width: 100%;
+  }
+}
+.odivo__form-column {
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+  box-sizing: border-box;
+}
+.odivo__form-column_registration {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .odivo__form-column_mobile {
+    width: 100%;
+  }
+  .odivo__form-column_radio-mobile {
+    width: 87%;
+    float: right;
+    margin-right: 0;
+  }
+  .odivo__form-column_radio-mobile-alt {
+    margin-top: 15px;
+  }
+}
+.odivo__form-column:last-child {
+  margin-right: 0;
+}
+.odivo__form-column_min {
+  width: 30%;
+  margin-right: 5%;
+}
+.odivo__form-area:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.odivo__form-area_hide {
+  display: block;
+}
+@media (max-width: 768px) {
+  .odivo__form-area_mobile:after {
+    clear: none;
+  }
+  .odivo__form-area_hide {
+    display: none;
+    width: 70%;
+    margin: 50px auto 30px;
+  }
+}
+.odivo__form-field {
+  width: 100%;
+  margin-bottom: 85px;
+  position: relative;
+}
+.odivo__form-field:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+@media (max-width: 2500px) {
+  .odivo__form-field {
+    margin-bottom: 30px;
+  }
+}
+.odivo__form-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 80px;
+  color: #818285;
+  border: 3px solid;
+  text-align: left;
+  margin-left: 0;
+  position: relative;
+  display: block;
+  line-height: 1.5em;
+}
+.odivo__form-input_error {
+  color: #bf1e2e;
+  border: 3px solid;
+}
+.odivo__form-input_details {
+  width: 80%;
+}
+@media (max-width: 2500px) {
+  .odivo__form-input {
+    padding: 10px 20px;
+    border: 1px solid;
+  }
+  .odivo__form-input_error {
+    color: #bf1e2e;
+    border: 1px solid;
+  }
+}
+@media (max-width: 768px) {
+  .odivo__form-input_mobile {
+    float: right;
+  }
+  .odivo__form-input_zip {
+    margin-top: 30px;
+  }
+  .odivo__form-input_ship-mobile {
+    padding: 10px 5px;
+    text-align: center;
+  }
+}
+.odivo__form-radio {
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 0 0;
+}
+.odivo__form-radio + label {
+  cursor: pointer;
+}
+.odivo__form-radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.odivo__form-radio:not(checked) + label {
+  position: relative;
+}
+.odivo__form-radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: -100px;
+  width: 46px;
+  height: 46px;
+  border: 2px solid #CDD1DA;
+  border-radius: 50%;
+  background: #FFF;
+}
+@media (max-width: 2500px) {
+  .odivo__form-radio:not(checked) + label:before {
+    top: 10px;
+    left: -38px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #CDD1DA;
+  }
+}
+.odivo__form-radio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 45px;
+  left: -88px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #818285;
+  opacity: 0;
+  transition: all .2s;
+}
+@media (max-width: 2500px) {
+  .odivo__form-radio:not(checked) + label:after {
+    top: 14px;
+    left: -34px;
+    width: 8px;
+    height: 8px;
+  }
+}
+.odivo__form-radio:checked + label:after {
+  opacity: 1;
+}
+.odivo__form-hint {
+  font-size: .92em;
+  color: #bf1e2e;
+  position: absolute;
+  left: 105%;
+  width: 50%;
+  bottom: 0;
+  line-height: 1.1em;
+}
+@media (max-width: 3000px) {
+  .odivo__form-hint {
+    left: 0;
+    bottom: -46%;
+    width: auto;
+  }
+}
+.odivo__form-hint_registration {
+  bottom: 38%;
+  right: 5px;
+  width: auto;
+  left: auto;
+}
+.odivo__form-image {
+  background: url(img/icons.png) no-repeat left center;
+  background-size: cover;
+  width: 100%;
+  height: 1.8em;
+}
+.odivo__form-image_paypal {
+  background: url(img/paypal.png) no-repeat left center;
+  background-size: contain;
+}
+@media (max-width: 2500px) {
+  .odivo__form-image {
+    height: 3.37em;
+  }
+  .odivo__form-image_paypal {
+    height: 2em;
+  }
+}
+@media (max-width: 768px) {
+  .odivo__form-image {
+    height: 3.2em;
+  }
+}
+@media (max-width: 640px) {
+  .odivo__form-image {
+    height: 1.8em;
+  }
+}
+.odivo__form-check {
+  float: right;
+}
+.odivo__form-check:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+@media (max-width: 768px) {
+  .odivo__form-check {
+    float: none;
+  }
+}
+.odivo__form-check_text {
+  float: none;
+  margin-bottom: 70px;
+}
+@media (max-width: 2500px) {
+  .odivo__form-check_text {
+    margin-bottom: 20px;
+  }
+}
+.odivo__form-check_agree {
+  margin-top: 265px;
+  margin-bottom: 240px;
+}
+@media (max-width: 2500px) {
+  .odivo__form-check_agree {
+    margin-top: 80px;
+    margin-bottom: 70px;
+  }
+}
+.odivo__form-checkbox {
+  display: none;
+}
+.odivo__form-checkbox + label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+.odivo__form-checkbox + label span {
+  display: inline-block;
+  width: 85px;
+  height: 85px;
+  margin: 0 0 0 30px;
+  background: url(img/check.png) -100% -100% no-repeat;
+  cursor: pointer;
+  border: 1px solid;
+  float: right;
+}
+@media (max-width: 2500px) {
+  .odivo__form-checkbox + label span {
+    width: 25px;
+    height: 25px;
+  }
+}
+.odivo__form-checkbox:checked + label span {
+  background: #f8f8f8 url(img/check.png) 50% 50% no-repeat;
+}
+@media (max-width: 2500px) {
+  .odivo__form-checkbox:checked + label span {
+    background-size: 70%;
+  }
+}
+.odivo__form-checkbox_text + label span {
+  margin: 0 30px 0 0;
+  float: left;
+}
+@media (max-width: 330px) {
+  .odivo__form-checkbox_mobile + label span {
+    margin: 0 30px 50px 0;
+  }
+}
+.odivo__form-text {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.odivo__form-link {
+  text-transform: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 125px;
+}
+@media (max-width: 2500px) {
+  .odivo__form-link {
+    margin-left: 62px;
+  }
+}
+.odivo__form-link:hover {
+  text-transform: none;
+  text-decoration: underline;
+}
+.odivo__form-button {
+  background-color: #f8f8f8;
+  padding: 60px 200px;
+  border: 1px solid;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.odivo__form-button_head {
+  display: inline-block;
+}
+.odivo__form-button_check {
+  display: inline-block;
+  margin: 0;
+}
+.odivo__form-button-details {
+  background-color: #ffffff;
+  text-align: center;
+}
+@media (max-width: 2500px) {
+  .odivo__form-button {
+    padding: 10px 50px;
+  }
+}
+.odivo__text {
+  font-weight: 500;
+  line-height: 1.4em;
+}
+.odivo__text_hint,
+.odivo__text_size {
+  font-weight: 400;
+}
+.odivo__text_cost {
+  text-align: right;
+}
+.odivo__text_cost-modal {
+  text-align: left;
+  margin-top: 125px;
+}
+@media (max-width: 2500px) {
+  .odivo__text_cost-modal {
+    margin-top: 30px;
+  }
+}
+.odivo__text_prompt {
+  color: #bf1e2e;
+  font-weight: 400;
+}
+.odivo__column {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+.odivo__column_big {
+  width: 40%;
+}
+.odivo__column_middle {
+  width: 33%;
+  position: relative;
+}
+.odivo__column_min {
+  width: 27%;
+  text-align: right;
+}
+.odivo__column_registration {
+  width: 30%;
+  float: right;
+}
+@media (max-width: 768px) {
+  .odivo__column_registration {
+    width: 90%!important;
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+  }
+}
+.odivo__column_modal {
+  margin-bottom: 40px;
+}
+@media (max-width: 640px) {
+  .odivo__column_modal {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .odivo__column_mobile-big {
+    width: 70%;
+  }
+  .odivo__column_mobile-middle {
+    width: 30%;
+  }
+}
+@media (max-width: 1200px) {
+  .odivo__column_mobile {
+    width: 100%;
+  }
+  .odivo__column_form {
+    text-align: center;
+  }
+}
+.odivo__column_hide {
+  display: none;
+}
+.odivo__column-link {
+  display: inline-block;
+  line-height: 1.5em;
+}
+.odivo__column-link:hover {
+  text-decoration: underline;
+}
+.odivo__column-link:first-child:after {
+  content: '';
+  border-right: 2px solid;
+  height: 100%;
+  width: 1px;
+  margin: 0 25px 0 27px;
+}
+@media (max-width: 2500px) {
+  .odivo__column-link:first-child:after {
+    margin: 0 10px 0 15px;
+  }
+}
+.odivo__column-content {
+  margin-bottom: 200px;
+}
+.odivo__column-content:last-child {
+  margin-bottom: 40px;
+}
+@media (max-width: 2500px) {
+  .odivo__column-content {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 640px) {
+  .odivo__column-content {
+    margin-bottom: 30px;
+  }
+}
+.odivo__area {
+  margin-bottom: 100px;
+  padding-bottom: 70px;
+  border-bottom: 3px solid;
+}
+.odivo__area:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.odivo__area:last-child {
+  border-bottom: none;
+}
+@media (max-width: 2500px) {
+  .odivo__area {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid;
+  }
+}
+@media (max-width: 768px) {
+  .odivo__area:last-child {
+    border-bottom: 1px solid;
+  }
+}
+@media (max-width: 640px) {
+  .odivo__area {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+}
+.odivo__img {
+  width: 70%;
+}
+.odivo__img_modal {
+  width: 70%;
+}
+.odivo__select {
+  color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
+}
+.odivo__promo {
+  line-height: 3em;
+}
+.odivo__promo-check {
+  background: url(img/check.png) no-repeat right center;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background-size: contain;
+  position: absolute;
+  right: 20%;
+  top: calc(50% - 20px);
+}
+@media (max-width: 2500px) {
+  .odivo__promo-check {
+    width: 15px;
+    height: 15px;
+    top: calc(50% - 10px);
+  }
+}
+@media (max-width: 640px) {
+  .odivo__promo-check {
+    right: 5%;
+  }
+}
+.odivo__link {
+  text-decoration: underline;
+}
+.odivo__error {
+  padding: 40px 100px;
+  color: #bf1e2e;
+  border: 1px solid;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+@media (max-width: 2500px) {
+  .odivo__error {
+    padding: 10px 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .odivo__error {
+    margin-top: 0;
+  }
+}
+.odivo__checkout {
+  float: right;
+  margin-top: 195px;
+}
+@media (max-width: 2500px) {
+  .odivo__checkout {
+    margin-top: 45px;
+  }
+}
+@media (max-width: 1200px) {
+  .odivo__checkout {
+    float: none;
+    text-align: center;
+  }
+}
+.odivo__window {
+  min-height: 1500px;
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'OpenSans', Helvetica, Arial, sans-serif;
+  font-size: 54.17px;
+}
+@media (max-width: 2500px) {
+  .odivo__window {
+    min-height: 400px;
+  }
+}
+.odivo__modal {
+  margin: auto;
+  padding: 200px 50px 200px 100px;
+  box-sizing: border-box;
+  border: 3px solid #818285;
+  background-color: #ffffff;
+  z-index: 8888;
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+.odivo__modal:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.odivo__modal-content {
+  height: 1000px;
+  overflow: auto;
+  float: left;
+  width: 68%;
+  margin-right: 2%;
+}
+.odivo__modal-content:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.odivo__modal-area {
+  height: 1000px;
+  float: left;
+  width: 30%;
+  text-align: center;
+  position: relative;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+.odivo__modal-area:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.odivo__modal-logo {
+  width: 115px;
+  margin: 0 auto;
+  display: block;
+}
+.odivo__modal-text {
+  margin-top: 350px;
+  margin-bottom: 200px;
+}
+@media (max-width: 3500px) {
+  .odivo__modal {
+    font-size: .7em;
+  }
+}
+@media (max-width: 2500px) {
+  .odivo__modal {
+    padding: 50px 10px 50px 30px;
+    border: 1px solid;
+    font-size: .3em;
+  }
+  .odivo__modal-area {
+    padding: 0 15px;
+  }
+  .odivo__modal-area,
+  .odivo__modal-content {
+    height: 600px;
+  }
+  .odivo__modal-logo {
+    width: 45px;
+  }
+  .odivo__modal-text {
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 1700px) {
+  .odivo__modal {
+    font-size: .25em;
+  }
+  .odivo__modal-area,
+  .odivo__modal-content {
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .odivo__modal-area {
+    width: 100%;
+  }
+  .odivo__modal-content {
+    height: auto;
+    width: 100%;
+  }
+  .odivo__modal-logo {
+    display: none;
+  }
+}
+.odivo__modal-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.mfp-bg {
+  background-color: #ffffff;
+}
+.mfp-close-btn-in .mfp-close {
+  display: none;
+}
