@@ -18,8 +18,153 @@
 <body>
 
 
+<!--<a id="cl__i" href="#">Click ME</a>-->
+
 <div id="shopping-bag__button">Button</div>
 <div id="shopping-bag__popup"></div>
+<style>
+    .component-popup__overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.6); }
+    .component-popup__overlay-light {
+        background: rgba(255,255,255,.8); }
+
+    .component-popup__overlay .component-popup__overlay-close {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        overflow: hidden;
+        border: none;
+        background: url(../img/cross.png) no-repeat center center #FFF;
+        text-indent: 200%;
+        color: #000;
+        outline: none;
+        z-index: 100;
+    }
+
+    .wpkk-overlay nav {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        height: 60%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .wpkk-overlay ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-block;
+        height: 100%;
+        position: relative;
+    }
+
+    .wpkk-overlay ul li {
+        display: block;
+        height: 20%;
+        height: calc(100% / 5);
+        min-height: 54px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .wpkk-overlay ul li a {
+        font-size: 54px;
+        font-weight: 300;
+        display: block;
+        color: #fff;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+    }
+
+    .wpkk-overlay ul li a:hover,
+    .wpkk-overlay ul li a:focus {
+        color: #f0f0f0;
+    }
+
+    .wpkk-overlay-scale {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+        transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    }
+
+    .wpkk-overlay-scale.open {
+        visibility: visible;
+        opacity: 1;
+        z-index: 9999;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+        transition: transform 0.4s, opacity 0.4s;
+    }
+
+    .wpkk-content {
+        text-align:center;
+        padding:27px 50px;
+        color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        background-color: rgb( 255, 255, 255 );
+
+        border: 1px solid #000000;
+
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+
+    .mobile .wpkk-content {
+        width: 70%;
+        max-width: 280px;
+        padding:25px 30px;}
+
+    .wpkk-content .wpkk-alerts,
+    .wpkk-content .wpkk-alerts > img {
+        display: none; }
+
+    .wpkk-content.wpkk-success .wpkk-alerts,
+    .wpkk-content.wpkk-error .wpkk-alerts {
+        display: inline-block; }
+
+    .wpkk-content.wpkk-error .wpkk-alerts img.wpkk-error,
+    .wpkk-content.wpkk-success .wpkk-alerts img.wpkk-success {
+        display: block; }
+
+    .wpkk-content .wpkk-alerts img {
+        height: 20px;
+        margin-bottom: -4px;
+        margin-right: 15px; }
+</style>
+
+
+<script>
+    jQuery(document).ready(function(){
+        $(document).on('click',function(){
+//            console.log('@KK trigger Click');
+//            $(window).trigger( "window__triger" );
+
+            window.ee.emit('window__triger', 'tt');
+        });
+
+//        $(window).on('window__triger', function(){
+//            console.log('@KK Trow window__triger');
+//        });
+    });
+</script>
 
 <!--<section class="odivo odivo_modal">
     <div class="odivo__container odivo__container_details">
@@ -110,6 +255,8 @@
         </div>
     </div>
 </section>-->
+
+
 
 <!--<script src="/static/bundle.js"></script>-->
 <script src="assets/js/react/react.js"></script>

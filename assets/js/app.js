@@ -122,10 +122,9 @@ var ShoppingBagBtn = React.createClass({
             cart_count: 2,
         };
     },
-    toggleShoppingBag: function(e) {
+    tooglePopup: function(e) {
         e.preventDefault();
-
-        PopUp.changeState(true);
+        window.ee.emit('popup.display', {action : false,update : false});
     },
     render: function() {
         return (
@@ -133,7 +132,7 @@ var ShoppingBagBtn = React.createClass({
                 href="#"
                 title="View my shopping cart"
                 rel="nofollow"
-                onClick={this.toggleShoppingBag}
+                onClick={this.tooglePopup}
                 >
                 Shopping bag (<span className="ajax_cart_quantity unvisible">{this.state.cart_count}</span><span className="ajax_cart_no_product">{this.state.cart_count}</span>)
             </a>
@@ -144,33 +143,55 @@ var ShoppingBagBtn = React.createClass({
 var PopUp = React.createClass({
     getInitialState: function() {
         return {
-            enable: false,
+            active: false,
+            empty:  true
         };
-    },
-    changeState: function(curStatus) {
-        this.setState({ enable: curStatus },function(){
-            console.log(this.state.enable);
-        });
     },
     componentDidMount: function() {
         var self = this;
-        window.ee.addListener('News.add', function(item) {
-            var nextNews = item.concat(self.state.news);
-            self.setState({news: nextNews});
+        window.ee.addListener('popup.display', function(popup) {
+            console.log('PopUp::componentDidMount  popup.display');
+
+            if(popup.update) {
+                // var nextNews = item.concat(self.state.news);
+            } else {
+                var bag__update = !self.state.active;
+            }
+
+            self.setState({active: bag__update});
         });
     },
     componentWillUnmount: function() {
-        window.ee.removeListener('News.add');
+        window.ee.removeListener('popup.display');
     },
-    // componentDidMount() {
-        /*$.get('your/url/here').done((loadedData) => {
-            this.setState({data: loadedData});
-        });*/
-    // },
+    tooglePopup : function(e) {
+        e.preventDefault();
+        window.ee.emit('popup.display', {action : false,update : false} );
+    },
     render : function() {
-        console.log(this.state.enable);
+
+        /**
+         * @todo
+         *
+         */
+
         return (
-            <section className="odivo odivo_modal">
+            <div onClick={this.tooglePopup} className={'wpkk-overlay wpkk-overlay-scale component-popup__overlay component-popup__overlay-light ' + (this.state.active ? 'open' : '')}>
+                <div className="wpkk-content">
+                    <section className="odivo odivo_modal">
+                        <div className="odivo__container odivo__container_details">
+                            <a href="#test-popup" className="odivo__form-button odivo__form-button_check open-popup-link">CHECKOUT</a>
+                            <div id="test-popup" className="odivo__window mfp-hide">
+                                <div  className="odivo__modal">
+                                    <Product data={product__list} />
+                                    <Sidebar data={shopping__bag} />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            /*<section className="odivo odivo_modal">
                 <div className="odivo__container odivo__container_details">
                     <a href="#test-popup" className="odivo__form-button odivo__form-button_check open-popup-link">CHECKOUT</a>
                     <div id="test-popup" className="odivo__window mfp-hide">
@@ -180,7 +201,7 @@ var PopUp = React.createClass({
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>*/
        );
    }
 });
